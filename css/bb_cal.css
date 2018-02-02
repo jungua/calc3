@@ -1,0 +1,211 @@
+@charset "utf-8";
+body{background-color:#f4f4f4}
+
+/*placeholder*/
+.table_inptbox input::-webkit-input-placeholder{text-align:center; color:#cecece; }
+.table_inptbox input:-moz-placeholder{text-align:center; color:#cecece;}
+.table_inptbox input::-moz-placeholder{text-align:center; color:#cecece;}
+.table_inptbox input:-ms-input-placeholder{text-align:center; color:#cecece;}
+.table_inptbox input::placeholder{text-align:center; color:#cecece;}
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder{ /* WebKit browsers */ color:transparent;}
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */ color:transparent;}
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder{ /* Mozilla Firefox 19+ */ color:transparent;}
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder{ /* Internet Explorer 10+ */ color:transparent;}
+
+.mg_contents{margin-top:45px; margin-bottom:50px;}
+.bg_cal_blue{background-color:#4689e8; }
+#header .header_txt2 {position:relative;width:100%;height:100%;text-align: center;color:#fff;font-size:17px;line-height:45px;box-sizing:border-box;}
+.font_st{font-size:14px; font-weight:700; color:#656565; letter-spacing:-1px;}
+
+#header .btn_clse {position:absolute; z-index:1; top:0; right:0; width:45px; height:100%;}
+#header .btn_clse a {display:block; width:100%; height:100%; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_clse.png) no-repeat center center; background-size:13px 13px; text-indent:-9999px;}
+#header .btn_clse a:active {background:rgba(0,0,0,0.05) url(http://image.bbjang.com/imgs/bbjang/img01/btn_clse.png) no-repeat center center; background-size:13px 13px;}
+
+/* 상단 탭 */
+.cal_sett_box{position:relative; width:100%; height:auto; padding:8px 10px; box-sizing:border-box;}
+.cal_sett_box .tab_ul{position:relative; width:100%; height:auto; overflow:auto; border:1px solid #c0c0c0; box-sizing:border-box;}
+.cal_sett_box .tab_ul li{float:left; height:auto; border-right:1px solid #d3d3d3; box-sizing:border-box;}
+.cal_sett_box .tab_ul li:last-of-type{border-right:none;}
+.cal_sett_box .tab_ul li.tab_on{background-color:#4689e8; color:#fff; box-sizing:border-box;}
+.cal_sett_box .tab_ul li.tab_off{background-color:#fff; color:#515151;}
+.cal_sett_box .tab_ul li.tab_a{width:19%;}
+.cal_sett_box .tab_ul li.tab_b{width:21%;}
+.cal_sett_box .tab_ul li.tab_c{width:32%;}
+.cal_sett_box .tab_ul li.tab_d{width:28%;}
+.cal_sett_box .tab_ul li a.tab_st{display:block; width:100%; height:auto; line-height:20px; padding:11px 0; font-size:14px; font-weight:700; letter-spacing:-1px; text-align:center;}
+
+/*Tip*/
+.tip_box{position:relative; width:100%; height:auto; margin-top:8px; background-color:#fff; border:1px solid #495f7f; box-sizing:border-box;}
+.tip_box .tip_bg{position:absolute; display:block; width:30px; height:100%; background-color:#495f7f;}
+.tip_box .tip_bg .tip_tit{position:absolute; top:50%; margin-top:-22.5px; width:30px; height:auto; background-color:#495f7f; color:#fff; font-size:13px; font-weight:700; text-align:center;}
+.tip_box .tip_txt{padding:6px 6px 4px 36px;}
+.tip_box .tip_txt p{font-size:13.5px; line-height:17px; color:#515151; padding-bottom:3px;}
+.tip_box .tip_txt p:last-of-type{padding-bottom:0;}
+
+/* 라디오버튼 */
+.wrap_write{position:relative; width:100%; height:auto; padding-top:10px;}
+.selec_li{position:relative; width:100%; height:auto; padding-bottom:8px;}
+.selec_li .tit_txt{position:relative; font-size:14px; color:#3f4855; letter-spacing:-1px; line-height:20px; padding-left:5px;}
+.selec_li .tit_txt span{color:#1a212b; font-weight:bold;}
+.selec_li .tit_sub{font-size:13px; color:#50535a; letter-spacing:-1px; line-height:18px;}
+.selec_li .btn_qt{position:absolute; width:35px; height:35px; bottom:-6px; right:0; background:url("http://image.bbjang.com/imgs/bbjang/img01/btn_qt.png") no-repeat 7px center; background-size:23px 23px;}
+.selec_li .btn_qt a{display:block; width:100%; height:100%;}
+.selec_li ul{position:relative; width:100%; height:auto; overflow:auto; border:1px solid #d3d3d3; box-sizing:border-box; background-color:#fff; cursor:pointer; margin-top:4px;}
+.selec_li ul li{float:left; position:relative; height:auto; border-right:1px solid #d3d3d3; box-sizing:border-box;}
+.selec_li ul li:last-of-type{border-right:none;}
+.selec_li .radio_st{display:block; width:100%; height:40px; text-align:center;}
+.selec_li ul .radio_st input{position:absolute; width:0; height:0; top:0; left:0; opacity:0;}
+.selec_li ul .radio_st label{display:block; width:100%; height:100%; line-height:38px;}
+.selec_li ul .radio_st input[type="radio"]:checked ~ label span {padding-left:21px; line-height:38px; background:url("http://image.bbjang.com/imgs/bbjang/img01/rd_ck.png") no-repeat left 10px; background-size:18px 18px;}
+.selec_li ul .radio_st input[type="radio"]:checked ~ label {border:1px solid #4689e8; box-sizing:border-box; color:#4689e8;}
+.selec_li ul .radio_33{width:33.3333%;}
+.selec_li ul .radio_50{width:50%;}
+.selec_li ul .radio_st label span{display:inline-block; line-height:40px;}
+.mg_top{margin-top:10px; padding-bottom:0;}
+
+/* 날짜표 */
+.wrap_table{position:relative; width:100%; height:auto; padding-top:8px;}
+.wrap_table ul{position:relative; display:block; width:100%; height:auto; background-color:#fff; border:1px solid #c0c0c0; overflow:auto; box-sizing:border-box;}
+.wrap_table ul li{position:relative; width:100%; height:40px; border-top:1px solid #d3d3d3;}
+.wrap_table ul li:first-of-type{border-top:none;}
+.wrap_table .table_tit{position:absolute; width:33.3333%; line-height:40px; box-sizing:border-box; border-right:1px solid #d3d3d3; text-align:center;}
+.wrap_table .table_txtbox{ position:relative; padding-left:33.3333%; box-sizing:border-box; width:100%; height:100%; padding-right:50px; text-align:center;}
+.wrap_table .table_txtbox .table_date{font-size:15px; font-weight:700; color:#373737; text-align: center; line-height:40px;}
+.wrap_table .table_txtbox .btn_date{display:block; position:absolute; top:0; right:0; width:50px; height:100%; padding:8px 0; box-sizing:border-box;}
+.wrap_table .table_txtbox .btn_date a{display:block; width:100%; height:100%; background:url("http://image.bbjang.com/imgs/bbjang/img01/btn_date.png") no-repeat center center; background-size:21px 18px; border-left:1px solid #d3d3d3; box-sizing:border-box;}
+.wrap_table .table_txtbox .btn_date:active{background-color:rgba(0,0,0,0.05);}
+.img_qt{position:absolute; top:6px; right:1px; width:30px; height:30px; }
+.img_qt a{display:block; width:100%; height:100%;}
+
+/*금액입력표*/
+.wrap_table .table_inptbox{position:relative; padding-left:33.3333%; box-sizing:border-box; width:100%; height:100%; text-align:center;}
+.wrap_table .table_inptbox input{width: 100%; height: 100%; display: block; border: none; background: none; outline: none; text-align: right; padding: 0px 20px; box-sizing: border-box; font-size:15px; font-weight:700; color:#373737;}
+.wrap_table .table_inptbox label{display:block; width:100%; height:100%; line-height:38px;}
+.wrap_table .table_txtbox .txt_unit{display:block; position:absolute; top:0; right:0; width:50px; height:100%; line-height:40px; box-sizing:border-box;}
+.wrap_table .table_txtbox .txt_money{position:absolute; top:0; right:50px; font-size:15px; font-weight:700; color:#373737; line-height:40px;}
+
+/*계산결과표*/
+.cal_sett_box table{position:relative; width:100%; height:auto; overflow:auto;}
+.result_thead{border:1px solid #aabbcf; box-sizing:border-box; background-color:#e5effa;}
+.result_thead tr{width:100%; height:26px; line-height:26px; font-size:13px;}
+.result_thead tr th{border-right:1px solid #aabbcf;}
+.th_num{width:11%; text-align:center;}
+.th_contents{width:37%; padding:0 6px;}
+.th_sum{width:52%; padding:0 8px; border-right:none; font-weight:700!important; letter-spacing:0;}
+.th_sum .sub_txt{font-size:12px; font-weight:400; line-height:15px; letter-spacing:-0.5px;}
+.result_table{border:1px solid #bababa; box-sizing:border-box; background-color:#fff; margin-top:4px;}
+.result_table tr{width:100%; height:28px; border-bottom:1px solid #cecece;}
+.result_table tr td{border-right:1px solid #cecece; font-size:14px; font-weight:400; color:#515151;}
+.result_table .sum_2{height:42px;}
+.result_table .sum_3{height:57px;}
+.result_table .sum_4{height:71px;}
+.result_table .txt_red{font-weight:700; color:#f80000;}
+.result_money{display:block; position:relative; width:100%; height:50px; background-color:#fff; border:1px solid #bababa; box-sizing:border-box; }
+
+/*푸터영역*/
+.fix_btn_box{position:fixed; width:100%; height:50px; bottom:0; background-color:#b6bbc2; overflow:auto; z-index:800; font-size:17px; font-weight:bold; color:#fff; line-height:50px; text-align:center;}
+.fix_btn_box a{display:block; width:100%; height:100%;}
+.fix_blue{background-color:#4689e8;}
+
+/*----- 기본팝업 -----*/
+.pop_wrap{position:fixed; z-index:1000; top:0; left:0; right:0; bottom:0; width:100%; height:100%;}
+.pop_bg_modal{position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%; background:rgba(0,0,0,0.6);}
+.pop_container{position:fixed; top:50%; left:50%; overflow:hidden; background-color:#fff; box-shadow:0 3px 6px rgba(0,0,0,0.3); -webkit-box-shadow:0 3px 6px rgba(0,0,0,0.3); -ms-box-shadow:0 3px 6px rgba(0,0,0,0.3); -moz-box-shadow:0 3px 6px rgba(0,0,0,0.3); -o-box-shadow:0 3px 6px rgba(0,0,0,0.3);}
+.pop_wid{width:300px; margin-left:-150px;}
+.pop_mt{margin-top:-162px;}
+/* 팝업 헤더 */
+.common_h{position:relative; width:100%; height:44px; background-color:#4689e8; line-height:44px;}
+.common_h h2 {width:100%; height:100%; color:#fff; font-weight:600; font-size:16px; text-align:center;}
+/* 팝업 콘텐츠 */
+.com_content{position:relative; width:100%; max-height:220px; overflow:auto; padding:12px 18px; font-size:14px; color:#515151; line-height:20px; box-sizing:border-box;}
+.b_content{font-weight:600;}
+.border_content{font-weight:600; text-decoration:underline;}
+/* 팝업 하단 */
+.common_btn{position:relative; width:100%; height:auto; border-top:1px solid #d2d2d2;}
+.common_btn:after{display:block; clear:both; content:"";}
+.common_btn .pop_btn01 {width:100%; height:50px; line-height:50px;}
+.common_btn .pop_btn01 a{display:block; width:100%; height:100%; font-size:16px; color:#222222; font-weight:600; text-align:center; background-color:#f4f4f4;}
+.common_btn .pop_btn01 a:active{background-color:#eeeeee;}
+/* 팝업 스크롤 */
+.scroll_s::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2) !important;
+	border-radius: 4px !important;
+	background-color: #F5F5F5 !important;
+}
+
+.scroll_s::-webkit-scrollbar
+{
+	width: 5px !important;
+	background-color: #F5F5F5 !important;
+	-webkit-appearance: none !important;
+}
+
+.scroll_s::-webkit-scrollbar-thumb
+{
+	border-radius: 10px !important;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3) !important;
+	background-color: #dadada!important;
+}
+.scroll_s::-webkit-scrollbar-thumb:window-inactive {
+   background: #dadada!important;
+ }
+
+/*----- 계산기 메인페이지 -----*/
+.white_bg{background-color:#fff;}
+.content_main{margin-top:45px; margin-bottom:8px;}
+.content_main .calc_exp{position:relative; width:100%; height:57px; background-color:#314562; text-align:center;}
+.content_main .exp_txt{position:relative; display:inline-block; text-align:left; color:#fff; font-size:13px; font-weight:600; line-height:18px; padding:10px 0 10px 55px; background:url(http://image.bbjang.com/imgs/bbjang/bbj_calc/calculator.png) no-repeat 0 center; background-size:43px 43px;}
+@media(min-width:350px){
+    .content_main .exp_txt{font-size:14px;}
+}
+/*계산기 선택버튼*/
+.content_main .tax_bg{position:relative; width:100%; height:auto; padding:10px 17px 3px 17px; box-sizing:border-box; background-color:#dbe1e9; border-bottom:1px solid #c0c8d3;}
+.content_main .calc_tax{position:relative; width:100%; height:auto;}
+.content_main .calc_tax:after{display:block; content:''; clear:both;}
+.content_main .calc_tax .btn_tax{float:left; width:49%; height:82px; margin-bottom:8px;}
+.content_main .calc_tax .btn_tax:nth-of-type(odd){padding-right:2%;}
+.content_main .calc_tax .btn_tax a{display:block; background-color:#fff; text-align:center; width:100%; height:100%; border-radius:4px; border:1px solid #b4c3d7; box-shadow:0 2px 2px rgba(0,0,0,0.2); -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.2); -ms-box-shadow:0 2px 2px rgba(0,0,0,0.2); -moz-box-shadow:0 2px 2px rgba(0,0,0,0.2); -o-box-shadow:0 2px 2px rgba(0,0,0,0.2); box-sizing:border-box;}
+.content_main .calc_tax .btn_tax a:active{background-color:#f2f6fb;}
+.btn_tax .h_tax{font-weight:600; font-size:17px; color:#4689e8; padding-top:19px;}
+.btn_tax .exp_tax{font-weight:600; font-size:14px; color:#314562; padding-top:8px;}
+/*계산기 공지사항*/
+.content_main .notice_calc{position:relative; width:100%; height:100%; padding:7px 15px; box-sizing:border-box; background-color:#fff;}
+.content_main .notice_calc:after{display:block; content:''; clear:both;}
+.content_main .notice_calc .notice_h{position:relative; width:100%; height:auto; padding-right:90px; margin-bottom:6px; box-sizing:border-box;}
+.notice_calc .notice_h h3{font-size:15px; line-height:30px; color:#000; border-bottom:2px solid #ffc85a;}
+.notice_calc .inq_calc{position:absolute; width:80px; height:32px; top:0; right:0; line-height:32px; text-align:center;}
+.notice_calc .inq_calc a{display:block; width:100%; height:100%; color:#000; background-color:#ffc85a; font-size:14px; font-weight:600; border-radius:4px; box-sizing:border-box;}
+.notice_calc .inq_calc a:active{background-color:#f9c358;}
+.notice_calc .list_wrap{position:relative; width:100%; height:auto;}
+.notice_calc .list_wrap .notice_list{position:relative; width:100%; height:auto;}
+.notice_calc .list_wrap .notice_list:after{display:block; content:''; clear:both;}
+.list_wrap .notice_list li{position:relative; width:100%; height:auto; float:left; font-size:15px; color:#000;}
+.list_wrap .notice_list li a{display:block; width:100%; height:auto; padding:6px 90px 6px 7px; box-sizing:border-box;}
+.list_wrap .notice_list li a:active{background-color:#efefef;}
+.list_wrap .notice_list li a .title_nt{width:100%; height:auto; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; box-sizing:border-box; letter-spacing:-0.7px;}
+.list_wrap .notice_list li a .notice_date{position:absolute; top:6px; right:8px; color:#4c4c4c; font-size:14px;}
+.list_wrap .more_list{position:relative; width:100%; height:30px; line-height:30px; background-color:#f3f8ff; border:1px solid #dbe1e9; text-align:center; box-sizing:border-box; margin-top:6px;}
+.list_wrap .more_list a{display:block; width:100%; height:100%; font-size:14px; color:#000;}
+.list_wrap .more_list a:active{background-color:#ebf1f9;}
+
+/*----- 계산기 공지사항 페이지 -----*/
+.content_main .c_notice_list{position:relative; width:100%; height:auto;}
+.content_main .c_notice_list .view_title a{padding:10px 42px 10px 12px; box-sizing:border-box; display:block;}
+.content_main .c_notice_list .view_title a:active{background-color:#efefef;}
+.c_notice_list .ntlist_l, .c_notice_list .view_title, .c_notice_list .detail_nt, .c_notice_list .d_nt{position:relative; width:100%; height:auto;}
+.content_main .c_notice_list .d_nt{letter-spacing:-0.6px; line-height:18px;}
+.content_main .c_notice_list .detail_nt{padding:12px; box-sizing:border-box;}
+.content_main .c_notice_list .ntlist_l{border-bottom:1px solid #bfbfbf; color:#3d3d3d; font-size:15px;}    
+.ntlist_l .view_title .nt_title{width:100%; height:auto; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; box-sizing:border-box; margin-bottom:2px; font-weight:600; letter-spacing:-0.6px;}
+.ntlist_l .view_title .in_date{color:#7d7d7d; font-size:13px;}
+.ntlist_l .view_title .btn_spread{position:absolute; top:19px; right:12px;}
+.ntlist_l .view_title .btn_fold{transform:rotate(-180deg); -webkit-transform:rotate(-180deg); -o-transform:rotate(-180deg); -moz-transform:rotate(-180deg); -ms-transform:rotate(-180deg);}
+.ntlist_l .detail_nt{border-top:1px solid #cacaca; background-color:#f0f0f0;}
+.ntlist_l .detail_nt .img_box{width:100%; height:auto; margin-bottom:10px; text-align:center;}
+.ntlist_l .detail_nt .img_box img{width:100%; height:auto;}
+/*공지사항 없음*/
+.content_main .list_none{position:relative; width:100%; height:auto;}
+.list_empty_row1 {padding-top:88px; text-align:center;}
+.mt_100{margin-top:100px;}
+.list_empty_row2 {padding-top:10px; color:#a1a3a6; font-size:15px; text-align:center;}

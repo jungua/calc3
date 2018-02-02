@@ -1,0 +1,30 @@
+@charset "utf-8";
+@font-face{
+	font-family:"SpoqaHanSans-Regular";
+	src:url('bb_font/bb-Regular.eot');
+	src:url('bb_font/bb-Regular.eot?#iefix') format('embedded-opentype'),
+	url('bb_font/bb-Regular.woff') format('woff'),
+	url('bb_font/bb-Regular.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal
+}
+@font-face{
+	font-family:"SpoqaHanSans-Bold";
+	src:url('bb_font/bb-Bold.eot');
+	src:url('bb_font/bb-Bold.eot?#iefix') format('embedded-opentype'),
+	url('bb_font/bb-Bold.woff') format('woff'),
+	url('bb_font/bb-Bold.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal
+}
+@font-face{
+	font-family:"SpoqaHanSans-Thin";
+	src:url('bb_font/bb-Thin.eot');
+	src:url('bb_font/bb-Thin.eot?#iefix') format('embedded-opentype'),
+	url('bb_font/bb-Thin.woff') format('woff'),
+	url('bb_font/bb-Thin.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal
+}
+
+

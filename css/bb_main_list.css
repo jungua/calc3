@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+html {height:100%; overflow:hidden;}
+body{overflow:hidden;}
+#wrap{overflow-y:hidden!important;}
+#container{overflow-y:auto;}
+
+/* 최근검색 및 추천검색 */
+.srch_bg_modal{display:none; position:fixed; top:45px; left:0; right:0; bottom:0; z-index:1250; width:100%; background-color:#f5f7f7;}
+
+.srch_drop{display:none; position:absolute; top:41px; left:0px; z-index:1300; width:100%; height:auto; padding:0 5px 0 145px; box-sizing:border-box; -webkit-backface-visibility:hidden; backface-visibility:hidden; -webkit-perspective:1000; perspective:1000;}
+.srch_drop_on{display:block; padding:0 5px;}
+.srch_drop ul{position:relative; width:100%; height:auto; background-color:#fff; border-radius:0 0 3px 3px; box-shadow:1px 3px 5px #d7d7d7; overflow:hidden;}
+.srch_drop ul li{position:relative; width:100%; height:40px; line-height:40px; font-size:14px;}
+.srch_drop ul .srch_history{background:url(http://image.bbjang.com/imgs/bbjang/img01/ico_srch_history.png) no-repeat 10px center; background-size:18px 18px;}
+.srch_drop ul .history_go:active, .srch_drop ul .srch_go:active{background:rgba(0,0,0,0.05);}
+.srch_drop ul .history_go{position:relative; width:100%; height:100%; padding:0 40px; box-sizing:border-box; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.srch_drop ul .history_del{position:absolute; top:0; right:0; width:40px; height:40px; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_history_del.png) no-repeat center center; background-size:17px 17px;}
+.srch_drop ul .history_del a{position:relative; width:100%; height:100%; text-indent:-9999px;}
+.srch_drop ul .srch_go{position:relative; width:100%; height:100%; padding:0 10px; box-sizing:border-box; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+
+/*--------------------------------------------------- 검색 ---------------------------------------------------*/
+.srch_result{position:relative; float:right; width:auto; height:100%; line-height:31px; font-size:15px; margin-right:7px;}
+.srch_result .font_small{font-size:13px;}
+
+/* 검색 결과 없음 */
+.list_none{display:none; position:relative; width:100%; height:auto;}
+.list_none .list_none_row1{padding-top:88px; text-align:center;}
+.list_none .list_none_row2{padding-top:10px; color:#a1a3a6; font-size:15px; text-align:center;}
+
+/****************************** 170727 김다미 ******************************/
+/* 고정 영역 */
+.fix_wrap{position:absolute; top:50px; z-index:1000; width:100%; height:auto;}
+.fix_bg_modal{display:none; position:fixed; top:82px; bottom:0; left:0; right:0; z-index:1100; background:rgba(0,0,0,0.6); cursor:pointer;}
+.mt_93{margin-top:93px;}
+
+/* 상단 필터 */
+.filter_wrap{position:relative; width:100%; height:37px; padding-right:165px; box-sizing:border-box; border-top:1px solid #17191a; border-bottom:1px solid #17191a; background-color:#323638;}
+.filter_wrap > ul{position:relative; width:100%; height:100%;}
+.filter_wrap > ul:after{content:""; display:block; clear:both;}
+.filter_wrap > ul .main_select{position:relative; width:33.3333%; height:100%; box-sizing:border-box; float:left; text-align:center; cursor:pointer;}
+.filter_wrap > ul .main_select span{display:inline-block; width:auto; height:33px;  line-height:35px; padding:0px 15px 0 5px; box-sizing:border-box; background:url("http://image.bbjang.com/imgs/bbjang/img01/ico_slct_drop.png") no-repeat 38px 15px; background-size:7px 4px; color:#ebeff2; font-size:15px; font-weight: 700}
+.filter_wrap > ul .main_select .slct_active{color:#a5c5ff; border-bottom:3px solid #9dc1ff; background:url("http://image.bbjang.com/imgs/bbjang/img01/ico_slct_drop_active.png") no-repeat 38px 15px; background-size:7px 4px;}
+
+/* 무료매물등록 */
+.btn_main_write{position:absolute; top:3px; right:5px; width:75px; height:29px; line-height:27px; border-radius:3px; border:1px solid #292d30; box-sizing:border-box; background-color:#629bff; color:#fff; text-align:center; font-size:13px; cursor:pointer;}
+
+/* 위로올리기 */
+.btn_go_up{position:fixed; z-index:800; right:15px; bottom:10px; width:40px; height:40px; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_go_up.png) no-repeat center center; background-size:40px 40px;}
+.btn_go_up a{position:relative; display:block; width:100%; height:100%;}
+
+/*----------------------------------------- 170816 마이메뉴수정(김다솜) -----------------------------------------*/
+.full_bg_modal{display:none; position:fixed; top:0; bottom:0; left:0; right:0; z-index:1500; background:rgba(0,0,0,0.6); cursor:pointer;}
+#my_wrap{position:fixed; top:0; left:0; z-index:1600; width:260px; height:100%; background-color:#f5f7f7; overflow-y:auto;-webkit-overflow-scrolling:touch; -webkit-overflow-scrolling:touch;}
+/* 마이메뉴 상단 */
+.my_top{position:relative; width:100%; height:150px; background:#0a72a7;}
+.my_top h2{position:relative; width:100%; height:88px; margin-left:-3px; text-indent:-9999px; background:url(http://image.bbjang.com/imgs/bbjang/img01/img_my_logo2.png) no-repeat 82px 32px; background-size:103px 40px;}
+.my_top .info_wrap{position:relative; width:100%; height:60px;}
+.my_top .info_wrap .before_login{display:inline-block; width:100%; height:100%;}
+.my_top .info_wrap .before_login .btn_login{width:210px; height:40px; line-height:40px; margin:0 auto; background:#fff; border-radius:3px; border:1px solid #0d6896; box-sizing:border-box;}
+.my_top .info_wrap .before_login .btn_login a{display:block; width:100%; height:100%; text-align:center; color:#084b6d; font-size:15px; font-weight:700; border-radius:5px;}
+.my_top .after_login{position:relative; width:100%; height:100px; padding:30px 10px 22px 95px; box-sizing:border-box;}
+.my_top .after_login .login_name{position:relative; width:100%; height:20px;}
+.my_top .after_login .login_name img{position:relative; width:20px; height:20px; top:0; left:0;}
+.my_top .after_login .login_name{display:inline-block; position:relative; text-align:left; line-height:20px; font-size:18px; color:#fff; font-weight:700;}
+.my_top .after_login .login_name span.social_kko{padding-left:25px; box-sizing:border-box; background:url(http://image.bbjang.com/imgs/bbjang/img01/ico_kakao.png) left top no-repeat; background-size:20px 20px;}
+.my_top .after_login .login_name span.social_nv{padding-left:25px; box-sizing:border-box; background:url(http://image.bbjang.com/imgs/bbjang/img01/ico_naver.png) left top no-repeat; background-size:20px 20px;}
+.my_top .after_login .agent_name{color:#7e8386; font-size:14px;}
+.my_top .after_login .btn_logout{display:inline-block; width:42px; height:17px; line-height:18px; border:1px solid #afafaf; border-radius:3px; vertical-align:text-bottom; overflow:hidden; margin-left:5px;}
+.my_top .after_login .btn_logout a{display:block; width:100%; height:100%; font-size:11px; color:#484848; background-color:#f6f6f6; text-align:center;}
+.my_top .after_login .btn_logout a:active{background-color:#dedede;}
+.my_top .after_login .login_num{position:relative; width:100%; height:auto; padding-top:8px; line-height:20px; text-align:left; font-size:14px; color:#d5e7f1;}
+.my_top .after_login .photo_clip{position:absolute; top:23px; left:20px; width:60px; height:60px; border:2px solid #fff; border-radius:100%; box-shadow:2px 2px 2px #085f8c; background:url(http://image.bbjang.com/imgs/bbjang/img01/img_my_default.png) no-repeat center center; background-size:cover; overflow:hidden; box-sizing:border-box;}
+.my_top .after_login .photo_clip img{width:100%; height:100%;}
+.my_top .after_login .btn_my_set{position:absolute; top:-55px; right:10px; width:25px; height:25px; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_my_set.png) no-repeat center center; background-size:20px 20px;}
+.my_top .after_login .btn_my_set a{display:block; width:100%; height:100%; text-indent:-9999px;}
+/* 마이메뉴 상단 - 정보수정 버튼  type2  _170314 추가 */
+.my_top .btn_box{position:relative; width:226px; height:auto; margin:0 auto;}
+.my_top .btn_box a:first-of-type{margin-right:10px;}
+.my_top .btn_box .btn_info_md{float:left; width:100px; height:30px; line-height:30px; border-radius:3px; background:#fff; font-size:14px; font-weight:700; color:#1c1e1f; letter-spacing:-1px; text-align:center;}
+.my_top .btn_box .btn_logout{float:left; width:100px; height:30px; line-height:30px; border-radius:3px; background:#fff; font-size:14px; font-weight:700; color:#1c1e1f; letter-spacing:-1px; text-align:center;}
+.my_top .btn_box .btn_st{float:left; width:106px; height:32px; line-height:34px; border-radius:3px; border:1px solid #0d6896; background:#fff; font-size:14px; font-weight:700; color:#084b6d; letter-spacing:-0.5px; text-align:center;}
+.my_top .btn_box .btn_st:active{background:#ecf3f7;}
+/* 마이메뉴 리스트 */
+.my_mid{position:relative; width:100%; height:auto; background-color:#fff;}
+.my_mid ul{width:100%; height:auto;}
+.my_mid .my_more{position:relative; width:100%; height:40px; line-height:40px; background:url(http://image.bbjang.com/imgs/bbjang/img01/ico_my_more.png) no-repeat 95% center; background-size:5px 8px; border-bottom:1px solid #ededed;}
+.my_mid .my_more a{display:block; width:100%; height:100%; padding-left:10px; box-sizing:border-box; font-weight:700;}
+.my_mid .my_more a:active{background:#fafdff url(http://image.bbjang.com/imgs/bbjang/img01/ico_my_more.png) no-repeat 95% center; background-size:5px 8px;}
+.my_mid .my_more .cue-badge{display:inline-block; position:absolute; top:50%; right:29px; width:26px; height:26px; margin-top:-13px; border:none; -webkit-border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%; border-radius:50%; background-color:#ff002a; background:-webkit-linear-gradient(to bottom,#ff3300,#ff002a); background:linear-gradient(to bottom,#ff3300,#ff002a); outline:0; font-size:13px; color:#fff; letter-spacing:-1px; line-height:26px; text-align:center;}
+.my_mid .my_write{position:relative; width:100%; height:40px; line-height:40px; background-color:#129de3;}
+/* 마이메뉴 리스트 - 등록하기 버튼  type2  _170314 추가 */
+.my_mid .my_write_type2{position:relative; width:100%; height:44px; line-height:44px; border-top:1px solid #dddfdf; border-bottom:1px solid #dddfdf; background-color:#f5f7f7;}
+.my_mid .my_write_type2 a{width:210px; height:34px; margin:5px auto 0 auto; padding:0; box-sizing:border-box; font-size:15px; font-weight:700; text-align:center; color:#fff; line-height:34px; letter-spacing:0; -webkit-border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px; border-radius:3px; -webkit-box-shadow:inset 0 -1px 1px #545454; -moz-box-shadow:inset 0 -1px 1px #545454; -ms-box-shadow:inset 0 -1px 1px #108cca; -o-box-shadow:inset 0 -1px 1px #545454; box-shadow:inset 0 -1px 1px #545454; background:#5d5d5d; background-size:21px 22px;}
+.my_mid .my_write_type2 a:active{border-radius:5px; -webkit-box-shadow:none; -moz-box-shadow:none; -ms-box-shadow:none; -o-box-shadow:none; box-shadow:none; background:#4e4e4e; background-size:21px 22px;}
+/* 마이메뉴 초대 */
+.my_bot{position:relative; width:100%; height:50px; line-height:50px; background-color:#fff; border-bottom:1px solid #ededed;}
+.my_bot:after{content:""; display:block; clear:both;}
+.my_bot .bot_txt{width:auto; height:100%; padding-left:10px; float:left; font-size:14px; color:#6c7275;}
+.my_bot .bot_list{width:auto; height:100%; padding-right:5px; float:right;}
+.my_bot .bot_list:after{content:""; display:block; clear:both;}
+.my_bot .bot_list li{width:28px; height:28px; padding:11px 7px; float:left; background:url(http://image.bbjang.com/imgs/bbjang/img01/bg_bar02.png) no-repeat right center; background-size:1px 18px;}
+.my_bot .bot_list li:last-of-type{background:none;}
+.my_bot .bot_list li a{display:block; width:100%; height:100%; border-radius:100%; text-indent:-9999px;}
+.my_bot .btn_kko a{background:#3b1d1d url(http://image.bbjang.com/imgs/bbjang/img01/txt_kko.png) no-repeat center center; background-size:22px 7px;}
+.my_bot .btn_kko a:active{background:#2e1616 url(http://image.bbjang.com/imgs/bbjang/img01/txt_kko.png) no-repeat center center; background-size:22px 7px;}
+.my_bot .btn_sms a{background:#0b99e0 url(http://image.bbjang.com/imgs/bbjang/img01/txt_sms.png) no-repeat center center; background-size:19px 8px;}
+.my_bot .btn_sms a:active{background:#0b91d4 url(http://image.bbjang.com/imgs/bbjang/img01/txt_sms.png) no-repeat center center; background-size:19px 8px;}
+.my_bot .btn_etc a{background:#616c71 url(http://image.bbjang.com/imgs/bbjang/img01/ico_etc.png) no-repeat center center; background-size:14px 3px;}
+.my_bot .btn_etc a:active{background:#565f63 url(http://image.bbjang.com/imgs/bbjang/img01/ico_etc.png) no-repeat center center; background-size:14px 3px;}
+/* 마이메뉴 초대  type2  _170314 추가 */
+.my_bot_type2{position:relative; width:100%; height:auto; background-color:#f5f7f7; padding:10px; box-sizing:border-box;}
+.my_bot_type2:after{content:""; display:block; clear:both;}
+.my_bot_type2 .btn_kko, .btn_sms{width:110px; height:32px; line-height:32px; border:1px solid #c3c6c7; -webkit-border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px; border-radius:3px;}
+.my_bot_type2 .btn_kko{float:left; background:#fff url(http://image.bbjang.com/imgs/bbjang/img01/ico_kko.png) no-repeat 12px 5px; background-size:24px 22px;}
+.my_bot_type2 .btn_sms{float:right; background:#fff url(http://image.bbjang.com/imgs/bbjang/img01/ico_sms.png) no-repeat 7px center; background-size:27px 26px;}
+.my_bot_type2 .btn_kko:active, .btn_sms:active{border:1px solid #afb1b2;}
+.my_bot_type2 .btn_kko a, .btn_sms a{display:block; width:100%; height:100%; padding-left:44px; box-sizing:border-box; font-size:14px; font-weight:700; color:#4d5356;}
+.my_bot_type2 .btn_kko a:active{background:#fcfcfc url(http://image.bbjang.com/imgs/bbjang/img01/ico_kko.png) no-repeat 12px 5px; color:#232627; background-size:24px 22px; border-radius:3px;}
+.my_bot_type2 .btn_sms a:active{-webkit-border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px; border-radius:5px; background:#fcfcfc url(http://image.bbjang.com/imgs/bbjang/img01/ico_sms.png) no-repeat 7px center; background-size:27px 26px; color:#232627;}
+.my_bot_type2 .small-line{display:inline-block; position:absolute; top:0; left:50%; width:2px; height:15px; margin:21px 0 0 -1px; background-color:#dcdfe0;}
+/* 비회원로그인시 공지알림체크 추가 */
+.my_mid .nonmem {position:relative; width:100%; height:40px; border-bottom:1px solid #ededed; line-height:40px;}
+.my_mid .nonmem span.tit{padding-left:10px; font-weight:700;}
+.settings_chk_input {display:inline; position:absolute; z-index:1; top:0; left:0; width:100%; height:100%; opacity:0; cursor:pointer;}
+.settings_label {margin-right:8px; padding-left:35px; font-size:14px;}
+.settings_chk_input:checked ~ .settings_chk_lb {background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_chk_on.png) no-repeat left center; background-size:22px 22px;}
+.settings_chk_lb {display:inline-block; position:relative; width:auto; height:22px; padding-left:30px; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_chk_off.png) no-repeat left center; background-size:22px 22px; line-height:23px; vertical-align:middle;}
+/* 비회원로그인시 공지알림체크 추가 */
+
+/****************************** 170816 김다미 ******************************/
+/* 롤링 메세지(상단변경) */
+.rolling_wrap{position:relative; width:100%; height:30px; line-height:30px; padding:0 31px 0 25px; box-sizing:border-box; background-color:#827b77;}
+.bg_rolling{background-color:#706865;}
+.rolling_bg_modal{display:none; position:fixed; top:113px; bottom:0; left:0; right:0; z-index:800; background:rgba(0,0,0,0.6); cursor:pointer;}
+
+.rolling_wrap .dot_fix{position:absolute; top:0; left:0; width:25px; height:100%; background:url(http://image.bbjang.com/imgs/bbjang/img01/ico_smile.png) no-repeat 5px center; background-size:16px 16px;}
+.rolling_wrap .btn_open{position:absolute; top:0; right:0; width:31px; height:100%; text-indent:-9999px; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_rolling_open.png) no-repeat center center; background-size:cover; cursor:pointer;}
+.rolling_wrap .btn_open:active{background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_rolling_active.png) no-repeat center center; background-size:cover;}
+.rolling_wrap .rolling_div{position:relative; width:100%; height:100%; color:#fffde8; font-size:13px; overflow:hidden; cursor:pointer; transform:translateZ(0); -webkit-transform:translateZ(0);}
+@media(max-width:350px) {
+.rolling_wrap .rolling_div{font-size:12px;}
+}
+
+.rolling_on{display:none; position:absolute; top:0; left:0; z-index:900; width:100%; height:auto; padding:3px!important; box-sizing:border-box;}
+.rolling_on ul{position:relative; width:100%; height:180px; padding:0 5px; border:1px solid #222222; box-sizing:border-box; background-color:#fff; border-radius:3px; overflow-y:auto; font-weight:bold;}
+@media screen and (min-width:340px) and (max-width:394px){
+	.rolling_on ul{height:255px;}
+}
+@media screen and (min-width:395px) and (max-width:434px){
+	.rolling_on ul{height:230px;}
+}
+@media screen and (min-width:435px) and (max-width:494px){
+	.rolling_on ul{height:205px;}
+}
+@media screen and (min-width:495px){
+	.rolling_on ul{height:180px;}
+}
+.rolling_on ul li{width:100%; height:auto; line-height:18px; padding:3px 5px 0px 10px; border-bottom:1px solid #ddd; box-sizing:border-box; background:url(http://image.bbjang.com/imgs/bbjang/img01/ico_bullet.png) no-repeat left 7px; background-size:5px 5px; font-size:12px;}
+.rolling_on ul li:last-of-type{border-bottom:none}
+.rolling_on ul li .fc_blue{color:#007acc;}
+.rolling_on .btn_clse{position:absolute; top:5px; right:7px; width:22px; height:22px; text-indent:-9999px; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_rolling_clse.png) no-repeat center center; background-size:cover; cursor:pointer;}
+
+/****************************** 170904 김다미 ******************************/
+/* 전체보기 */
+.dropmenu_wrap{position:absolute; top:3px; right:85px; z-index:1200; width:75px; height:auto;}
+.dropmenu_wrap .btn_dropmenu{position:relative; width:100%; height:29px; line-height:27px; border-radius:3px; border:1px solid #292d30; box-sizing:border-box; background-color:#629bff; color:#fff; text-align:center; font-size:13px; cursor:pointer;}
+.dropmenu_wrap .btn_dropmenu .new_ico{display:none; position:absolute; top:-2px; right:-4px; width:17px; height:17px;}
+.dropmenu_wrap .btn_dropmenu_on{border-radius:3px 3px 0 0; border:1px solid #181a19; background-color:#214076;}
+.dropmenu_wrap .dropmenu_container{display:none; position:relative; width:100%; height:auto; padding:0 3px; box-sizing:border-box; background-color:#fff; border-radius:0 0 3px 3px; border-width:0 1px 1px 1px; border-style:solid; border-color:#181a19;}
+.dropmenu_wrap li{position:relative; width:100%; height:52px; box-sizing:border-box; border-bottom:1px solid #dddddd; cursor:pointer;}
+.dropmenu_wrap li:last-of-type{border-bottom:none;}
+.dropmenu_wrap li .dropmenu{display:block; width:100%; height:100%; padding-top:34px; box-sizing:border-box; text-align:center; font-size:13px;}
+.dropmenu_wrap li .drop_conver{background:url("http://image.bbjang.com/imgs/bbjang/img01/ico_drop_conver.png") no-repeat center 8px; background-size:32px 22px;}
+.dropmenu_wrap li .drop_contact{background:url("http://image.bbjang.com/imgs/bbjang/img01/ico_drop_contact.png") no-repeat center 8px; background-size:27px 22px;}
+.dropmenu_wrap li .drop_like{background:url("http://image.bbjang.com/imgs/bbjang/img01/ico_drop_like.png") no-repeat center 10px; background-size:18px 17px;}
+.dropmenu_wrap li .drop_custom{background:url("http://image.bbjang.com/imgs/bbjang/img01/ico_drop_custom.png") no-repeat center 8px; background-size:26px 24px;}
+.dropmenu_wrap li .drop_notice{background:url("http://image.bbjang.com/imgs/bbjang/img01/ico_drop_notice.png") no-repeat center 6px; background-size:20px 23px;}
+.dropmenu_wrap li .drop_reco{background:url("http://image.bbjang.com/imgs/bbjang/img01/ico_drop_reco.png") no-repeat center 9px; background-size:21px 19px;}
+.dropmenu_wrap li .drop_ad{letter-spacing:-1px; background:url("http://image.bbjang.com/imgs/bbjang/img01/ico_drop_ad.png") no-repeat center 7px; background-size:16px 21px;}
+.dropmenu_wrap li .drop_more{background:url("http://image.bbjang.com/imgs/bbjang/img01/ico_drop_more.png") no-repeat center 8px; background-size:19px 20px;}
+.dropmenu_wrap li .new_ico{display:none; position:absolute; top:4px; right:5px; width:17px; height:17px;}
+.dropmenu_wrap li .count_alim{position:absolute; top:4px; right:5px; width:17px; height:17px; line-height:17px; padding-right:2px; box-sizing:border-box; background:url("http://image.bbjang.com/imgs/bbjang/img01/bg_num_badge.png") no-repeat center center; background-size:100%; color:#fff; font-size:12px; text-align:center; letter-spacing:-1px;}
+
+/* 플로팅 버튼
+.float_wrap{position:fixed; z-index:1400; right:10px; bottom:60px; width:50px; height:auto;}
+.float_fake_modal{display:none; position:absolute; z-index:1400; top:0; right:0; width:50px; height:50px; border-radius:100%; background:rgba(0,0,0,0.6); cursor:pointer;}
+.float_btn {position:relative; z-index:100; width:50px; height:50px; border-radius:100%; background:#13a8f2 url(http://image.bbjang.com/imgs/bbjang/img01/btn_floating.png) no-repeat 15px 15px; background-size:20px 20px; box-shadow:0px 2px 4px rgba(0,0,0,0.3); cursor:pointer; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
+.badge_float_all{display:none; position:absolute; top:-3px; right:-3px; width:22px; height:22px; background:url("http://image.bbjang.com/imgs/bbjang/img01/bg_num_badge.png") center center no-repeat; background-size:22px 22px; font-size:13px; font-weight:bold; line-height:22px;  letter-spacing:-1px; color:#fff; text-align:center; text-indent:0; z-index:1400;}
+.badge_float_all span{display:block; width:22px; height:22px; line-height:22px;}
+.fb_fake_modal{display:none; position:absolute; top:-3px; right:-3px; z-index:1400; width:22px; height:22px; background:rgba(0,0,0,0.6); border-radius:100%; cursor:pointer}
+
+.float_01,.float_02,.float_03,.float_04,.float_05{position:absolute; top:-25px; right:0px; width:500%; height:50px; opacity:0; line-height:50px; transform:scale(0); transform-origin:87.5% center; cursor:pointer;}
+.float_write, .float_ad, .float_inquiry, .float_map, .float_lastest{display:block; float:left; width:20%; height:100%; border-radius:100%; box-shadow:0px 2px 3px rgba(0,0,0,0.3);}
+.float_write:active, .float_ad:active, .float_inquiry:active, .float_map:active, .float_lastest:active{background-color:#efefef;}
+.float_txt {float:left; width:80%; height:100%; padding-right:12px; color:#fff; font-size:15px; font-weight:600; text-align:right; box-sizing:border-box;}
+
+.float_write{background:#fff url(http://image.bbjang.com/imgs/bbjang/img01/btn_float_write.png) no-repeat 15px 14px; background-size:19px 20px;}
+.float_ad{background:#fff url("http://image.bbjang.com/imgs/bbjang/img01/ico_float_ad.png") no-repeat 16px 12px; background-size:19px 25px;}
+.float_inquiry{background:#fff url("http://image.bbjang.com/imgs/bbjang/img01/ico_float_inquiry.png") no-repeat center; background-size:22px 24px;}
+.float_map{background:#fff url("http://image.bbjang.com/imgs/bbjang/img01/ico_float_map2.png") no-repeat center 12px; background-size:18px 24px;}
+.float_lastest{background:#fff url("http://image.bbjang.com/imgs/bbjang/img01/ico_float_lastest.png") no-repeat center; background-size:23px 27px;}
+
+.float_wrap_on {z-index:1600;}
+.float_wrap_on .float_btn {background:#13a8f2 url(http://image.bbjang.com/imgs/bbjang/img01/btn_floating.png) no-repeat 15px 15px; background-size:20px 20px; transform:rotate(-135deg);-webkit-transform:rotate(-135deg); -o-transform:rotate(-135deg); -moz-transform:rotate(-135deg); -ms-transform:rotate(-135deg); box-shadow:0px -2px -3px rgba(0,0,0,0.6);}
+.float_wrap_on .float_01{top:-65px; opacity:1; transform:scale(1);}
+.float_wrap_on .float_02{top:-130px; opacity:1; transform:scale(1);}
+.float_wrap_on .float_03{top:-195px; opacity:1; transform:scale(1);}
+.float_wrap_on .float_04{top:-260px; opacity:1; transform:scale(1);}
+.float_wrap_on .float_05{top:-325px; opacity:1; transform:scale(1);}
+ */
+
+/*---------------------- 170908 아래로 내리기 추가(김다미) ----------------------*/
+/* 아래로 내리기 */
+.btn_go_down{position:fixed; z-index:800; right:70px; bottom:10px; width:40px; height:40px; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_go_down.png) no-repeat center center; background-size:40px 40px;}
+.btn_go_down a{position:relative; display:block; width:100%; height:100%;}
+
+/*---------- 171017  1:1답변 new표시(뱃지) @플로팅버튼 ----------*/
+.bb_newbadge_a_2 {position:absolute; top:-1px; right:-2px; width:17px; height:17px; background:url('http://image.bbjang.com/imgs/bbjang/img01/ico_new_badge.png') no-repeat 0 0; background-size:17px 17px; font-size:13px; color:#fff; line-height:22px; text-align:center;}
+
+/*----- 171102 상단결과 수정(김다솜)  -----*/
+.result_wrap{position:relative; width:100%; height:30px; border-bottom:1px solid #c9c9c9; background-color:#f5f5f5}
+.result_wrap:after{content:""; display:block; clear:both;}
+
+.result_wrap .align_wrap{position:relative; float:right; width:90px; height:22px; margin:3px 0; background-color:#fff; border-radius:3px; border:1px solid #9a9fa1; overflow:hidden;}
+.result_wrap .align_wrap select{position:relative; display:block; width:100%; height:22px; padding-left:5px; box-sizing:border-box; font-size:14px; color:#4d5356; border:none; outline:none; background:#fff url(http://image.bbjang.com/imgs/bbjang/img01/ico_slct_drop02.png) no-repeat 95% center; background-size:10px 6px;}
+
+.result_wrap .result_container{position:relative; float:right; width:auto; height:100%; margin-left:5px;}
+.result_wrap .result_container:after{content:""; display:block; clear:both;}
+.result_wrap .result_container div{position:relative; float:left;}
+.result_wrap .result_container .result_txt{width:auto; height:100%; line-height:30px;}
+.result_wrap .result_container .result_rfsh{width:28px; height:30px; margin:3px 4px; overflow:hidden;}
+.result_wrap .result_container .result_rfsh a{position:relative; width:100%; height:100%;}
+.result_wrap .result_container .result_rfsh .circle_svg{position:relative; top:-3px; width:30px; height:30px; transform:rotate(-75deg); -webkit-transform:rotate(-75deg); -ms-transform:rotate(-75deg); -moz-transform:rotate(-75deg); -o-transform:rotate(-75deg); transform-origin:50% 50%; -webkit-transform-origin:50% 50%; -ms-transform-origin:50% 50%; -moz-transform-origin:50% 50%; -o-transform-origin:50% 50%;}
+.result_wrap .result_container .result_rfsh .circle_inner{stroke-dashoffset:0; stroke-dasharray:280; stroke-width:16; stroke-miterlimit:10; stroke-linecap:round; stroke:#4d5356; fill:transparent;}
+.result_wrap .result_container .result_rfsh .arrow_span{position:absolute; top:0px; right:12px; display:inline-block; width:0; height:0; border-left:5px solid transparent; border-right:5px solid transparent; border-bottom:6px solid #4d5356; transform:rotate(45deg) scale(1.0); -webkit-transform:rotate(45deg) scale(1.0); -ms-transform:rotate(45deg) scale(1.0); -moz-transform:rotate(45deg) scale(1.0); -o-transform:rotate(45deg) scale(1.0); transform-origin:50% 50%; -webkit-transform-origin:50% 50%; -ms-transform-origin:50% 50%; -moz-transform-origin:50% 50%; -o-transform-origin:50% 50%; transition:all 0.1s ease-in-out; -webkit-transition:all 0.1s ease-in-out; -ms-transition:all 0.1s ease-in-out; -moz-transition:all 0.1s ease-in-out; -o-transition:all 0.1s ease-in-out;}
+@keyframes loading {
+	0% {transform:rotate(-60deg); }
+	100% {transform:rotate(300deg);}
+}
+@keyframes loading-circle {
+	0% {stroke-dashoffset:0;}
+	50% {stroke-dashoffset:-180;}
+	100% {stroke-dashoffset:-360}
+}
+.result_wrap .result_container .result_rfsh_on .circle_svg{animation:loading 0.6s ease-in-out 1; -webkit-animation:loading 0.6s ease-in-out 1; -ms-animation:loading 0.6s ease-in-out 1; -moz-animation:loading 0.6s ease-in-out 1; -o-animation:loading 0.6s ease-in-out 1;}
+.result_wrap .result_container .result_rfsh_on .circle_inner{animation:loading-circle 0.6s ease-in-out 1; -webkit-animation:loading-circle 0.6s ease-in-out 1; -ms-animation:loading-circle 0.6s ease-in-out 1; -moz-animation:loading-circle 0.6s ease-in-out 1; -o-animation:loading-circle 0.6s ease-in-out 1;}
+.result_wrap .result_container .result_rfsh .arrow_span_on{transform:rotate(45deg) scale(0.0); -webkit-transform:rotate(45deg) scale(0.0); -ms-transform:rotate(45deg) scale(0.0);
+ -moz-transform:rotate(45deg) scale(0.0); -o-transform:rotate(45deg) scale(0.0);}
+
+/* 171102 광고등록버튼추가 */
+.my_mid .my_write_type2 .color_ad{background:#f15a5a; box-shadow:inset 0 -1px 1px #a95f5f
+;}
+.btn_set_ad1{float:left; width:75px; height:26px; padding:2px 0; margin-left:3px;}
+.btn_set_ad1 a{display:block; width:100%; height:100%; background:#f15a5a; border-radius:3px; font-size:13px; font-weight:700; color:#fff; letter-spacing:-0.5px; text-align:center; line-height:28px;}
+
+@media(min-width:360px){
+    .result_wrap .result_container{margin-left:7px;}
+    .result_wrap .result_container .result_rfsh{margin:3px 6px;} 
+    .btn_set_ad1{width:94px;}
+    .btn_set_ad1 a{font-size:14px;}
+}
+
+/*171108 추가(정우아)*/
+/*-----------171102 메인 검색창에 오늘 매물등록건수 추가(정우아)-------------*/
+.today_num{position:absolute; top:13px; right:54px; border:1px solid #c5c5c5; padding:2px 2px 0 2px; cursor:pointer;}
+.today_n{font-weight:600; color:#bf5c72;}
+/*-----------171102 테스트 도메인 스타일 추가(정우아)---*/
+.domain_box{position:absolute; top:13px; left:142px; width:50px; height:20px; line-height:20px;}
+
+/* 171110 내리스트 관리버튼 수정 (주철만) */
+.card_my_btn .my_btn_sb {height: 100%; float: left; background-color: #0ca2ed; color: #fff; font-size: 12px; font-weight: 400; font-family: "SpoqaHanSans-Bold"; text-align: center; }
+.card_my_btn .my_btn_sb a:active{background:rgba(0,0,0,0.05);}
+.card_my_btn .my_btn_sky.width_5ea_1 { width:17%;}
+.card_my_btn .my_btn_sky.width_5ea_2 { width:20%;}
+.card_my_btn .my_btn_sb.width_5ea_3 { width:29%;}
+.card_my_btn .my_btn_sky.border-r {border-right:1px solid #d1e2ea;}
+
+/*---------------------- 170906 메인헤더 수정_로고애니메이션(김다미) ----------------------*/
+.header_bar{position:relative; width:100%; height:100%; padding:5px 52px 4px 140px; box-sizing:border-box; -webkit-backface-visibility:hidden; backface-visibility:hidden; -webkit-perspective:1000; perspective:1000;}
+.header_bar_map{padding:5px 50px 4px 145px;}
+.header_bar_on{padding:5px 5px 4px 5px; z-index:10;}
+.header_srch{position:relative; width:100%; height:100%; background-color:#fff; border-radius:3px; overflow:hidden; padding:10px 70px 10px 40px; box-sizing:border-box; box-shadow:0px 1px 1px #00679b;}
+.header_bar_on .header_srch{border-radius:3px 3px 0 0;}
+.header_srch .srch_btn{position:absolute; top:0px; width:40px; height:100%;}
+.header_srch .srch_btn a{display:block; width:100%; height:100%; text-indent:-9999px;}
+.header_srch  input[type="text"]{position:relative; display:block; width:100%; height:100%; line-height:16px; font-size:16px; border:none; outline:none; background-color:transparent;}
+.header_srch  input::-webkit-input-placeholder{color:#6c6c6c; font-weight:normal; line-height:16px; letter-spacing:-0.5px;}
+.header_srch label{display:none; position:absolute; left:41px; top:10px; width:200%; line-height:16px; font-size:16px; color:#9d9fa2;}
+.header_srch .main_label { display:block; position:absolute; left:6px; top:11px; width:200%; line-height:16px; font-size:14px; color:#9d9fa2; cursor:pointer;}
+@media (min-width:360px) {
+.header_srch .main_label { font-size:16px; }
+}
+.header_srch .btn_reset{display:none; left:0; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_reset.png) no-repeat center center; background-size:17px 14px;}
+.header_bar_on .btn_reset{display:block;}
+.header_srch .btn_srch_del{display:none; right:40px; width:30px; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_srch_del.png) no-repeat right center; background-size:12px 12px;}
+.header_srch .btn_srch_on{display:none; right:0; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_srch_on.png) no-repeat center center; background-size:19px 21px;}
+.header_srch .btn_voice{right:0; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_srch_voice.png) no-repeat center center; background-size:13px 17px;}
+
+#header .header_btn{position:absolute; top:0;}
+#header .header_btn a{display:block; width:100%; height:100%;}
+#header .header_btn a:active{background-color:#0b9ae1;}
+#header .btn_my{left:0; width:50px; height:100%;}
+#header .btn_my a{background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_aside.png) no-repeat center center; background-size:22px 16px;}
+#header .btn_logo_home{left:50px; width:90px; height:100%; padding-left:2px; box-sizing:border-box; background:url(http://image.bbjang.com/imgs/bbjang/img01/bg_bar03.png) no-repeat left center; background-size:2px 38px;}
+#header .btn_logo_home a{position:relative; background:url(http://image.bbjang.com/imgs/bbjang/img01/img_srch_logo02.png) no-repeat center 10px; background-size:74px 26px; overflow:hidden;}
+#header .btn_logo_home a:active{background-color:transparent;}
+#header .btn_logo_home .circle{position:absolute; top:19px; left:43px; z-index:10; width:7px; height:7px; border-radius:100%; opacity:0; transition:transform 0.3s ease-in-out;}
+#header .btn_logo_home .logo_main{position:absolute; top:0; left:0; z-index:20; width:88px; height:45px; background:url(http://image.bbjang.com/imgs/bbjang/img01/img_srch_logo02.png) no-repeat center 10px; background-size:74px 26px; opacity:0; transform:scale(0); transition:transform 0.2s ease-in-out 0.2s;}
+#header .btn_logo_home .play .circle{opacity:1; transform:scale(20);}
+#header .btn_logo_home .play .logo_main{opacity:1; transform:scale(1);}
+#header .btn_map{right:0; top:0; width:50px; height:45px;}
+#header .btn_map a{background:url(http://image.bbjang.com/imgs/bbjang/img01/ico_map3.png) no-repeat center 6px; background-size:24px 34px;}
+#header .cue-badge{display:inline-block; position:absolute; top:0; left:0; width:26px; height:26px; margin:2px 0 0 22px; border:1px solid #fff; -webkit-border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%; border-radius:50%; -webkit-box-shadow:1px 1px 2px rgba(0,0,0,.23); -moz-box-shadow:1px 1px 2px rgba(0,0,0,.23); -ms-box-shadow:1px 1px 2px rgba(0,0,0,.23); -o-box-shadow:1px 1px 2px rgba(0,0,0,.23); box-shadow:1px 1px 2px rgba(0,0,0,.23); background-color:#ff0c08; background:-webkit-linear-gradient(to bottom,#ff5b45,#ff0c08); background:linear-gradient(to bottom,#ff5b45,#ff0c08); outline:0; font-size:13px; color:#fff; letter-spacing:-1px; line-height:26px; text-align:center;}
+
+/*마이메뉴 하단 부동산 계산기 버튼 추가(180202 정우아)*/
+.my_bot_type2 .btn_calc{width:100%; height:32px; line-height:32px; border:1px solid #c3c6c7; -webkit-border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px; border-radius:3px; margin-bottom:6px;}
+.my_bot_type2 .btn_calc{background-color:#fff;}
+.my_bot_type2 .btn_calc a .mybtn_calc{background:url(http://image.bbjang.com/imgs/bbjang/bbj_calc/ico_btn_calc.png) no-repeat 0px center; background-size:20px 20px; padding:8px 0 8px 26px;}
+.my_bot_type2 .btn_calc a{display:block; width:100%; height:100%; text-align:center; box-sizing:border-box; font-size:14px; font-weight:700; color:#4d5356;}
+.my_bot_type2 .btn_calc a:active{-webkit-border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px; border-radius:5px; background-color:#fcfcfc; color:#232627;}

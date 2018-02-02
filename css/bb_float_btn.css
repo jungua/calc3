@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* 플로팅 버튼 */
+.float_wrap{position:fixed; z-index:1400; right:10px; bottom:60px; width:50px; height:auto;}
+.float_fake_modal{display:none; position:absolute; z-index:1400; top:0; right:0; width:50px; height:50px; border-radius:100%; background:rgba(0,0,0,0.6); cursor:pointer;}
+.float_btn {position:relative; z-index:100; width:50px; height:50px; border-radius:100%; background:#13a8f2 url(http://image.bbjang.com/imgs/bbjang/img01/btn_floating.png) no-repeat 15px 15px; background-size:20px 20px; box-shadow:0px 2px 4px rgba(0,0,0,0.3); cursor:pointer; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
+.badge_float_all{display:none; position:absolute; top:-3px; right:-3px; width:22px; height:22px; background:url("http://image.bbjang.com/imgs/bbjang/img01/bg_num_badge.png") center center no-repeat; background-size:22px 22px; font-size:13px; font-weight:bold; line-height:22px;  letter-spacing:-1px; color:#fff; text-align:center; text-indent:0; z-index:1400;}
+.badge_float_all span{display:block; width:22px; height:22px; line-height:22px;}
+.fb_fake_modal{display:none; position:absolute; top:-3px; right:-3px; z-index:1400; width:22px; height:22px; background:rgba(0,0,0,0.6); border-radius:100%; cursor:pointer}
+
+.float_01,.float_02,.float_03,.float_04,.float_05{position:absolute; top:-25px; right:0px; width:500%; height:50px; opacity:0; line-height:50px; transform:scale(0); transform-origin:87.5% center; cursor:pointer;}
+.float_write, .float_ad, .float_inquiry, .float_map, .float_lastest{display:block; float:left; width:20%; height:100%; border-radius:100%; box-shadow:0px 2px 3px rgba(0,0,0,0.3);}
+.float_write:active, .float_ad:active, .float_inquiry:active, .float_map:active, .float_lastest:active{background-color:#efefef;}
+.float_txt {float:left; width:80%; height:100%; padding-right:12px; color:#fff; font-size:15px; font-weight:600; text-align:right; box-sizing:border-box;}
+
+.float_write{background:#fff url(http://image.bbjang.com/imgs/bbjang/img01/btn_float_write.png) no-repeat 15px 14px; background-size:19px 20px;}
+.float_ad{background:#fff url("http://image.bbjang.com/imgs/bbjang/img01/ico_float_ad.png") no-repeat 16px 12px; background-size:19px 25px;}
+.float_inquiry{background:#fff url("http://image.bbjang.com/imgs/bbjang/img01/ico_float_inquiry.png") no-repeat center; background-size:22px 24px;}
+.float_map{background:#fff url("http://image.bbjang.com/imgs/bbjang/img01/ico_float_map2.png") no-repeat center 12px; background-size:18px 24px;}
+.float_lastest{background:#fff url("http://image.bbjang.com/imgs/bbjang/img01/ico_float_lastest.png") no-repeat center; background-size:23px 27px;}
+
+.float_wrap_on {z-index:1600;}
+.float_wrap_on .float_btn {background:#13a8f2 url(http://image.bbjang.com/imgs/bbjang/img01/btn_floating.png) no-repeat 15px 15px; background-size:20px 20px; transform:rotate(-135deg);-webkit-transform:rotate(-135deg); -o-transform:rotate(-135deg); -moz-transform:rotate(-135deg); -ms-transform:rotate(-135deg); box-shadow:0px -2px -3px rgba(0,0,0,0.6);}
+.float_wrap_on .float_01{top:-60px; opacity:1; transform:scale(1);}
+.float_wrap_on .float_02{top:-120px; opacity:1; transform:scale(1);}
+.float_wrap_on .float_03{top:-180px; opacity:1; transform:scale(1);}
+.float_wrap_on .float_04{top:-240px; opacity:1; transform:scale(1);}
+.float_wrap_on .float_05{top:-300px; opacity:1; transform:scale(1);}
+
+/*부동산계산기 플로팅버튼*/
+.float_calc{background:#fff url("http://image.bbjang.com/imgs/bbjang/bbj_calc/ico_float_calculator.png") no-repeat center 12px; background-size:25px 25px; display:block; float:left; width:20%; height:100%; border-radius:100%; box-shadow:0px 2px 3px rgba(0,0,0,0.3);}
+.float_calc:active{background-color:#efefef;}
